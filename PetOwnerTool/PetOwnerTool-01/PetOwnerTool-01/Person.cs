@@ -9,11 +9,13 @@ namespace PetOwnerTool_01
     public class Person
     {
         public string name;
+        public DateTime birthday;
         public Pet pet;
 
-        public Person(string name, Pet pet)
+        public Person(string name, DateTime birthday, Pet pet)
         {
             this.name = name;
+            this.birthday = birthday;
             this.pet = pet;
         }
     }
