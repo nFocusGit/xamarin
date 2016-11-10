@@ -56,14 +56,25 @@ namespace Slide03
             persons.Add(person2);
             persons.Add(person3);
 
+            PrintPersons(persons);
+
+            Console.ReadKey();
+            Animal newAnimal = new Animal("New Animal", 5, 10);
+            Pet newPet = new Pet("New Pet", newAnimal);
+            Person newPerson = new Person("New Person Name", newPet.Name, newAnimal.Name);
+            persons.Add(newPerson);
+            PrintPersons(persons);
+        }
+
+        private static void PrintPersons(List<Person> persons)
+        {
             foreach (var item in persons)
             {
                 Console.WriteLine("Name: " + item.Name
                     + " Birthday: " + item.Birthday.ToString("D") + " Age: " + item.GetAge()
-                    + "\nHas a Pet called '" + item.Pet.Name + "' and is a " + item.Pet.Animal.Name 
+                    + "\nHas a Pet called '" + item.Pet.Name + "' and is a " + item.Pet.Animal.Name
                     + " with " + item.GetNumberOfEyes() + " eye(s).\n");
             }
-            
         }
     }
 

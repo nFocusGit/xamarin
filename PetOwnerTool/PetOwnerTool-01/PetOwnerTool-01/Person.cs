@@ -23,6 +23,24 @@ namespace Slide03
             this.Pet = pet;
         }
 
+        public Person(string name, Pet pet)
+        {
+            this.Name = name;
+            this.Pet = pet;
+        }
+
+        public Person(string name)
+        {
+            this.Name = name;
+        }
+
+        public Person(string name, string petName, string petAnimalType)
+        {
+            this.Name = name;
+            Animal a = new Animal(petAnimalType);
+            Pet p = new Pet(petName, a);
+            p.Name = petName;
+        }
 
         public int GetAge()
         {

@@ -11,6 +11,12 @@ namespace Slide03
         private string name;
         private Animal animal;
 
+        public Pet(string name, Animal animal)
+        {
+            this.Name = name;
+            this.Animal = animal;
+        }
+
         public string Name
         {
             get
@@ -37,10 +43,5 @@ namespace Slide03
             }
         }
 
-        public Pet(string name, Animal animal)
-        {
-            this.Name = name;
-            this.Animal = animal;
-        }
     }
 }

@@ -12,6 +12,20 @@ namespace Slide03
         private int legs;
         private int eyes;
 
+        public Animal(string name, int legs, int eyes)
+        {
+            this.Name = name;
+            this.Legs = legs;
+            this.Eyes = eyes;
+        }
+
+        public Animal(string name)
+        {
+            this.Name = name;
+            this.Legs = 0;
+            this.Eyes = 0;
+        }
+
         public string Name
         {
             get
@@ -51,12 +65,6 @@ namespace Slide03
             }
         }
 
-        public Animal(string name, int legs, int eyes)
-        {
-            this.Name = name;
-            this.Legs = legs;
-            this.Eyes = eyes;
-        }
 
     }
 }
