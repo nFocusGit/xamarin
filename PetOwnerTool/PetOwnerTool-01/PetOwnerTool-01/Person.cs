@@ -3,16 +3,51 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel;
 
 namespace Slide03
 {
-    public class Person
+    public class Person : INotifyPropertyChanged
     {
+        public event EventHandler<string> NameChanged;
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        private void OnPropertyChanged(string propertyName)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(propertyName));
+            }
+        }
+
+        public void OnNameChanged()
+        {
+            EventHandler<string> handler = NameChanged;
+            if (handler != null)
+            {
+                handler(this, this.Name);
+            }
+        }
+
         private string name;
         private DateTime birthday;
         private Pet pet;
 
-        public string Name { get { return name; } set { name = value; } }
+        public string Name
+        {
+            get { return name; }
+            set
+            {
+                if (Name != value)
+                {
+                    name = value;
+                    OnNameChanged();
+                    OnPropertyChanged("Name");
+
+                }
+            }
+        }
         public DateTime Birthday { get { return birthday; } set { birthday = value; } }
         public Pet Pet { get { return pet; } set { pet = value; } }
 

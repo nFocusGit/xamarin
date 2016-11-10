@@ -35,8 +35,6 @@ namespace Slide03
         }
         
 
-        
-
         private static void PetOwnerTool()
         {
             Animal animalDog = new Animal("Dog", 4, 1);
@@ -58,13 +56,23 @@ namespace Slide03
 
             PrintPersons(persons);
 
-            Console.ReadKey();
-            Animal newAnimal = new Animal("New Animal", 5, 10);
-            Pet newPet = new Pet("New Pet", newAnimal);
-            Person newPerson = new Person("New Person Name", newPet.Name, newAnimal.Name);
-            persons.Add(newPerson);
-            PrintPersons(persons);
+            //Console.ReadKey();
+            //Animal newAnimal = new Animal("New Animal", 5, 10);
+            //Pet newPet = new Pet("New Pet", newAnimal);
+            //Person newPerson = new Person("New Person Name", newPet.Name, newAnimal.Name);
+            //persons.Add(newPerson);
+            //PrintPersons(persons);
+
+            Person personObservable = new Person("Mr.Observable");
+            personObservable.NameChanged += PersonNameChanged;
+            personObservable.Name = "Mr.Hello";
         }
+
+
+            public static void PersonNameChanged(object sender, string e)
+            {
+                Console.WriteLine("Name has been changed " + e);
+            }
 
         private static void PrintPersons(List<Person> persons)
         {
