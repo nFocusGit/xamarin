@@ -39,9 +39,9 @@ namespace Slide03
 
         private static void PetOwnerTool()
         {
-            Animal animalDog = new Animal("Dog", 4, 2);
+            Animal animalDog = new Animal("Dog", 4, 1);
             Animal animalCat = new Animal("Cat", 4, 2);
-            Animal animalHuman = new Animal("Homosapien", 2, 2);
+            Animal animalHuman = new Animal("Homosapien", 2, 3);
 
             Pet petDog = new Pet("Doggy", animalDog);
             Pet petCat = new Pet("Miawer", animalCat);
@@ -58,10 +58,12 @@ namespace Slide03
 
             foreach (var item in persons)
             {
-                Console.WriteLine("" + item.Name
-                    + " is born on " + item.Birthday.ToString("D")
-                    + "\nHas a Pet called '" + item.Pet.Name + "' and is a " + item.Pet.Animal.Name + "\n");
+                Console.WriteLine("Name: " + item.Name
+                    + " Birthday: " + item.Birthday.ToString("D") + " Age: " + item.GetAge()
+                    + "\nHas a Pet called '" + item.Pet.Name + "' and is a " + item.Pet.Animal.Name 
+                    + " with " + item.GetNumberOfEyes() + " eye(s).\n");
             }
+            
         }
     }
 
