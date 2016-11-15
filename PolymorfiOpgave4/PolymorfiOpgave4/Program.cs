@@ -36,8 +36,53 @@ namespace PolymorfiOpgave4
             /////////////////////////////////////////
 
 
+            // Swap of two integers.
+            //int a = 40, b = 60;
+            //Console.WriteLine("Before swap: {0}, {1}", a, b);
+            //Swap<int>(ref a, ref b);
+            //Console.WriteLine("After swap: {0}, {1}", a, b);
+            //Console.ReadKey();
+
+            /////////////////////////////////////////
+            List<int> numberList = new List<int>();
+            Random random = new Random((int)DateTime.Now.Ticks & 0x0000FFFF);
+            for (int i = 0; i < 10; i++)
+            {
+                int randomNumber = random.Next(0, 100);
+                numberList.Add(randomNumber);
+            }
+            foreach (var item in numberList)
+            {
+                Console.WriteLine(item);
+            }
+            numberList.Sort();
+            Console.WriteLine("Press to set order");
+            Console.ReadKey();
+            foreach (var item in numberList)
+            {
+                Console.WriteLine(item);
+            }
 
             Console.ReadKey();
         }
+
+
+        //Generic method
+        ////http://www.c-sharpcorner.com/UploadFile/84c85b/using-generics-with-C-Sharp/
+        //static void Swap<T>(ref T a, ref T b)
+        //{
+        //    T temp;
+        //    temp = a;
+        //    a = b;
+        //    b = temp;
+        //}
+        //static void MyReverse<T>(List<T> list)
+        //{
+        //    var newList = new List<T>();
+        //    foreach (var item in list)
+        //    {
+        //        newList.Add(item);
+        //    }
+        //}
     }
 }
