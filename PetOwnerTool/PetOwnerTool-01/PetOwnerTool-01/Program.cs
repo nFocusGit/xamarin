@@ -5,6 +5,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+using static PetOwnerTool_01.IntExtension;
+
 namespace Slide03
 {
     class Program
@@ -19,6 +21,12 @@ namespace Slide03
             Console.WriteLine("\n-----------------------------start VectorTool...");
             VectorTool();
             Console.WriteLine("-----------------------------end VectorTool...");
+            Console.ReadKey();
+
+            Console.WriteLine("\n-----------------------------start IntExtension...");
+            var value = 3;
+            Console.WriteLine(value.MultiplyValue());
+            Console.WriteLine("-----------------------------end IntExtension...");
             Console.ReadKey();
         }
 
@@ -66,6 +74,7 @@ namespace Slide03
             Person personObservable = new Person("Mr.Observable");
             personObservable.NameChanged += PersonNameChanged;
             personObservable.Name = "Mr.Hello";
+
         }
 
 
