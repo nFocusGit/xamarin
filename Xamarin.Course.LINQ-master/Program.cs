@@ -78,6 +78,72 @@ namespace Xamarin.Course.LINQ
             }
 
             Console.ReadKey();
+            //////////////////////// find Person born in 1972
+            var findPerson1972 = from p in people
+                                 where p.BirthYear.ToString() == "1972"
+                                 select p;
+            foreach (var item in findPerson1972)
+            {
+                Console.WriteLine(item.Name);
+
+            }
+            Console.ReadKey();
+            //////////////////////// find all Persons 
+            var findAllPersons = from p in people
+                                 orderby p.Name //descending
+                                 select p;
+            foreach (var item in findAllPersons)
+            {
+                Console.WriteLine(item.Name);
+
+            }
+            Console.ReadKey();
+            //////////////////////// find Fish Pets 
+            var findFishPets = from p in pets
+                               where p.Kind.Type == AnimalType.Fish
+                               select p;
+            foreach (var item in findFishPets)
+            {
+                Console.WriteLine(item.Kind.Name + " Type: " + item.Kind.Type);
+
+            }
+            Console.ReadKey();
+            //////////////////////// find Pets with more than 2 eyes
+            var findPetsWithMoreThan2Eyes = from p in people
+                                            where (p.Pet != null) && p.Pet.Kind.Eyes > 2
+                                            select p;
+            foreach (var item in findPetsWithMoreThan2Eyes)
+            {
+                Console.WriteLine(item.Name + " Pet: " + item.Pet.Name + " Eyes: " + item.Pet.Kind.Eyes);
+
+            }
+            Console.ReadKey();
+            //////////////////////// Sort by Pet type and Person name
+            var findSortedByPetTypeAndPersons = from p in people
+                                                where p.Pet != null
+                                                orderby p.Pet.Kind.Type, p.Name
+                                                select p;
+            foreach (var item in findSortedByPetTypeAndPersons)
+            {
+                Console.WriteLine("Pet type: " + item.Pet.Kind.Type + " Owner: " + item.Name);
+
+            }
+            Console.ReadKey();
+            //////////////////////// Group by Pet type
+            var findPetGroups = from p in people
+                                where p.Pet != null
+                                group p by p.Pet.Kind.Type into g
+                                select new { PetType = g.Key, Name = g};
+            foreach (var item in findPetGroups)
+            {
+                Console.WriteLine("Pet type: " + item.PetType);
+                foreach (var person in item.Name)
+                {
+                    Console.WriteLine("Person Name: " + person.Name);
+                }
+
+            }
+            Console.ReadKey();
         }
     }
 }
