@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace Xamarin.Course.LINQ
 {
@@ -35,8 +36,26 @@ namespace Xamarin.Course.LINQ
 
     class Program
     {
+        private static async Task<string> MainAsync()
+        {
+            return await Task.Run(() => GetText());   
+        }
+
+        private static async Task<string> GetText()
+        {
+            await Task.Delay(5000);
+            return "finished...";
+        }
+
         static void Main(string[] args)
         {
+            // http://www.csharpstar.com/async-await-keyword-csharp/
+            //////////////////////////Test Async...
+            Console.WriteLine("Async started...");
+            Task<string> value = MainAsync();
+            Console.WriteLine("Async ended...press a key to continue...");
+            Console.ReadKey();
+            ///////////////////////////////////////////////////////////
             var pets = new SnooperList<Pet>(new List<Pet>()
             {
                 new Pet("Rudolph the Goldfish", new AnimalKind("Goldfish", AnimalType.Fish, eyes: 2, legs: 0)),
