@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8FC4B742-9C4D-4E99-AE5A-BACD7AC5550C}</ProjectGuid>
+    <ProjectGuid>{DF80E83D-3008-4A38-BE96-EE52905BBEA1}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Phoneword.Windows</RootNamespace>
@@ -159,7 +159,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Phoneword\Phoneword.csproj">
-      <Project>{C12C59EA-FC86-43D3-A266-301FF9276C3D}</Project>
+      <Project>{B8AC5AC2-EF22-43D3-829A-664272AFB83F}</Project>
       <Name>Phoneword</Name>
     </ProjectReference>
   </ItemGroup>

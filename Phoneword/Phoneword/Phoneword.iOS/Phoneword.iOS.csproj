@@ -5,7 +5,7 @@
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{589F1599-E0CE-4B3E-9BE7-E7F1EF8BF757}</ProjectGuid>
+    <ProjectGuid>{F1836B31-5383-4058-9E0C-0B29F76D5717}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
     <RootNamespace>Phoneword.iOS</RootNamespace>
@@ -88,6 +88,7 @@
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="PhoneDialer.cs" />
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
     <None Include="Entitlements.plist" />
@@ -139,7 +140,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Phoneword\Phoneword.csproj">
-      <Project>{C12C59EA-FC86-43D3-A266-301FF9276C3D}</Project>
+      <Project>{B8AC5AC2-EF22-43D3-829A-664272AFB83F}</Project>
       <Name>Phoneword</Name>
     </ProjectReference>
   </ItemGroup>
