@@ -21,6 +21,14 @@ namespace HelloWorld
                         new Label {
                             HorizontalTextAlignment = TextAlignment.Center,
                             Text = "Welcome to Xamarin Forms!.........."
+                        },
+                        new Button
+                        {
+                            Text = "Click me..."
+                        },
+                        new DatePicker
+                        {
+
                         }
                     }
                 }

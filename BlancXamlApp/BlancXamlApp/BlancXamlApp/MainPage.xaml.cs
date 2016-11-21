@@ -12,7 +12,13 @@ namespace BlancXamlApp
         public MainPage()
         {
             InitializeComponent();
-            myLabel.TextColor = Color.Blue;
+            //myLabel.TextColor = Color.Blue;
+
+            //DatePicker datePicker = new DatePicker
+            //{
+            //    Format = "D",
+            //    VerticalOptions = LayoutOptions.CenterAndExpand
+            //};
         }
     }
 }

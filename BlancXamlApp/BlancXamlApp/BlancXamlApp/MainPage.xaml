@@ -4,8 +4,15 @@
              xmlns:local="clr-namespace:BlancXamlApp"
              x:Class="BlancXamlApp.MainPage">
 
+  <StackLayout>
   <Label x:Name="myLabel" Text="Welcome to Xamarin Forms!"
            VerticalOptions="Center"
            HorizontalOptions="Center" />
+    
+    <DatePicker x:Name="datePicker" >
+    </DatePicker>
 
+    <Button x:Name="myButton" />
+  </StackLayout>
+  
 </ContentPage>
