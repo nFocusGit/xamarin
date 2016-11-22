@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CalculatorGUI"
+             x:Class="CalculatorGUI.MainPage">
+
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+                iOS="20, 40, 20, 20"
+                Android="20, 20, 20, 20"
+                WinPhone="20, 20, 20, 20" />
+  </ContentPage.Padding>
+
+  <ContentPage.Content>
+    <StackLayout VerticalOptions="FillAndExpand"
+                 HorizontalOptions="FillAndExpand"
+                 Orientation="Vertical"
+                 Spacing="15">
+      <Frame>
+        <Label x:Name="Display" Text="Type a number..." />
+      </Frame>
+
+      <StackLayout Orientation="Horizontal">
+        <Button x:Name="button1" Text="1" Clicked="OnClick" />
+        <Button x:Name="button2" Text="2" Clicked="OnClick" />
+        <Button x:Name="button3" Text="3" Clicked="OnClick" />
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Button x:Name="button4" Text="4" Clicked="OnClick" />
+        <Button x:Name="button5" Text="5" Clicked="OnClick" />
+        <Button x:Name="button6" Text="6" Clicked="OnClick" />
+      </StackLayout>
+      <StackLayout Orientation="Horizontal">
+        <Button x:Name="button7" Text="7" Clicked="OnClick" />
+        <Button x:Name="button8" Text="8" Clicked="OnClick" />
+        <Button x:Name="button9" Text="9" Clicked="OnClick" />
+      </StackLayout>
+      <Button x:Name="button0" Text="0" Clicked="OnClick" />
+    </StackLayout>
+  </ContentPage.Content>
+
+</ContentPage>
+
