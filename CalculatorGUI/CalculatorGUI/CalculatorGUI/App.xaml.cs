@@ -11,9 +11,22 @@ namespace CalculatorGUI
     {
         public App()
         {
+            //var page = new ContentPage();
+            //var layout = new StackLayout();
+            //var label = new Label();
+            //layout.Children.Add(label);
+            //page.Content = layout;
+
             InitializeComponent();
 
             MainPage = new CalculatorGUI.MainPage();
+
+      //      MainPage = new ContentPage(
+      //              Children = {
+      //new Label {Text = "Hello World!"},
+      //new Button {Text = "Click Me!" }
+      //      }
+      //          );
         }
 
         protected override void OnStart()

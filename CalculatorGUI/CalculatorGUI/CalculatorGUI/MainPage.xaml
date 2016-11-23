@@ -16,10 +16,11 @@
                  HorizontalOptions="FillAndExpand"
                  Orientation="Vertical"
                  Spacing="15">
-      <Frame>
-        <Label x:Name="Display" Text="Type a number..." />
-      </Frame>
-
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="Purple">
+        <Frame>
+          <Label x:Name="display" Text="Type..." />
+        </Frame>
+      </StackLayout>
       <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
         <Button x:Name="button1" Text="1" Clicked="OnClick" />
         <Button x:Name="button2" Text="2" Clicked="OnClick" />
