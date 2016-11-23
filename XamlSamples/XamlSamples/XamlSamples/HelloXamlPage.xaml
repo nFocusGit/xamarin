@@ -11,7 +11,29 @@
          Rotation="-15"
          IsVisible="true"
          FontSize="Large"
-         FontAttributes="Bold"
-         TextColor="Aqua" />
+         FontAttributes="Bold" >
+      <Label.TextColor>
+        Aqua
+      </Label.TextColor>
+    </Label>
+  
+  <!--Same as above...-->
+  <!--<Label>
+    <Label.Text>
+      Hello, XAML!
+    </Label.Text>
+    <Label.FontAttributes>
+      Bold
+    </Label.FontAttributes>
+    <Label.FontSize>
+      Large
+    </Label.FontSize>
+    <Label.TextColor>
+      Aqua
+    </Label.TextColor>
+    <Label.VerticalOptions>
+      Center
+    </Label.VerticalOptions>
+  </Label>-->
 
 </ContentPage>
