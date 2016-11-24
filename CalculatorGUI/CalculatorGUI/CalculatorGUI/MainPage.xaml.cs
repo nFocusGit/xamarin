@@ -14,7 +14,7 @@ namespace CalculatorGUI
         public MainPage()
         {
             InitializeComponent();
-            Button h = new Button();
+            //Button h = new Button();
         }
 
         void OnClick(object sender, EventArgs e)

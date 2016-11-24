@@ -9,6 +9,7 @@ using Android.OS;
 
 namespace XamlSamples.Droid
 {
+    // Theme = "@android:style/Theme.Holo.Light"
     [Activity(Label = "XamlSamples", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {

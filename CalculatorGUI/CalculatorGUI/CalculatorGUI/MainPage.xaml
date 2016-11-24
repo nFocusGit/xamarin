@@ -39,6 +39,11 @@
       <StackLayout Orientation="Vertical" HorizontalOptions="Center">
         <Button x:Name="button0" Text="0" Clicked="OnClick" />
       </StackLayout>
+
+      <StackLayout Orientation="Horizontal" HorizontalOptions="Center" BackgroundColor="Yellow">
+          <Label x:Name="myMarkupExtensionText" Text="{local:MyMarkupExtension X=4, Y=2}" />
+      </StackLayout>
+
     </StackLayout>
   </ContentPage.Content>
 

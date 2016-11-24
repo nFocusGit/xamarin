@@ -46,6 +46,9 @@
       <DependentUpon>HelloXamlPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SharedResourcesPage.xaml.cs">
+      <DependentUpon>SharedResourcesPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="XamlPlusCodePage.xaml.cs">
       <DependentUpon>XamlPlusCodePage.xaml</DependentUpon>
     </Compile>
@@ -88,6 +91,12 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="AbsoluteDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="SharedResourcesPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

@@ -9,6 +9,7 @@ using Android.OS;
 
 namespace CalculatorGUI.Droid
 {
+    // Theme = "@android:style/Theme.Holo.Light"
     [Activity(Label = "CalculatorGUI", Icon = "@drawable/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
