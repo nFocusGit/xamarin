@@ -60,6 +60,13 @@
     <Compile Include="Part4\SliderTransformsPage.xaml.cs">
       <DependentUpon>SliderTransformsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Part5\ClockPage.xaml.cs">
+      <DependentUpon>ClockPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Part5\ClockViewModel.cs" />
+    <Compile Include="Part5\OneShotDateTimePage.xaml.cs">
+      <DependentUpon>OneShotDateTimePage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Part3\SharedResourcesPage.xaml.cs">
       <DependentUpon>SharedResourcesPage.xaml</DependentUpon>
@@ -151,6 +158,18 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Part4\ListViewDemoPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Part5\OneShotDateTimePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Part5\ClockPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

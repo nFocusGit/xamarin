@@ -15,7 +15,7 @@ namespace XamlSamples
 
             // Part 1
             //MainPage = new XamlSamples.Part1.HelloXamlPage();
-            MainPage = new XamlSamples.Part1.XamlPlusCodePage();
+            //MainPage = new XamlSamples.Part1.XamlPlusCodePage();
 
             // Part 2
             //MainPage = new XamlSamples.Part2.GridDemoPage();
@@ -31,6 +31,10 @@ namespace XamlSamples
             //MainPage = new XamlSamples.Part4.SliderBindingsPage();
             //MainPage = new XamlSamples.Part4.SliderTransformsPage();
             //MainPage = new XamlSamples.Part4.ListViewDemoPage();
+
+            // Part 5
+            //MainPage = new XamlSamples.Part5.OneShotDateTimePage();
+            MainPage = new XamlSamples.Part5.ClockPage();
 
             //MainPage = new ContentPage
             //{
