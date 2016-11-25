@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace XamlSamples
+namespace XamlSamples.Part2
 {
     public partial class AbsoluteDemoPage : ContentPage
     {

@@ -35,21 +35,39 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="AbsoluteDemoPage.xaml.cs">
+    <Compile Include="Part2\AbsoluteDemoPage.xaml.cs">
       <DependentUpon>AbsoluteDemoPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="App.cs" />
-    <Compile Include="GridDemoPage.xaml.cs">
+    <Compile Include="Part2\GridDemoPage.xaml.cs">
       <DependentUpon>GridDemoPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="HelloXamlPage.xaml.cs">
+    <Compile Include="Part1\HelloXamlPage.xaml.cs">
       <DependentUpon>HelloXamlPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Part2\XamlPlusCodePage.xaml.cs">
+      <DependentUpon>XamlPlusCodePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Part3\RelativeLayoutPage.xaml.cs">
+      <DependentUpon>RelativeLayoutPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Part3\StaticConstantsPage.xaml.cs">
+      <DependentUpon>StaticConstantsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Part4\ListViewDemoPage.xaml.cs">
+      <DependentUpon>ListViewDemoPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Part4\SliderTransformsPage.xaml.cs">
+      <DependentUpon>SliderTransformsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SharedResourcesPage.xaml.cs">
+    <Compile Include="Part3\SharedResourcesPage.xaml.cs">
       <DependentUpon>SharedResourcesPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="XamlPlusCodePage.xaml.cs">
+    <Compile Include="Part4\SliderBindingsPage.xaml.cs">
+      <DependentUpon>SliderBindingsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Part1\XamlPlusCodePage.xaml.cs">
       <DependentUpon>XamlPlusCodePage.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
@@ -72,31 +90,67 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="HelloXamlPage.xaml">
+    <EmbeddedResource Include="Part1\HelloXamlPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="XamlPlusCodePage.xaml">
+    <EmbeddedResource Include="Part1\XamlPlusCodePage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="GridDemoPage.xaml">
+    <EmbeddedResource Include="Part2\GridDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="AbsoluteDemoPage.xaml">
+    <EmbeddedResource Include="Part2\AbsoluteDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="SharedResourcesPage.xaml">
+    <EmbeddedResource Include="Part3\SharedResourcesPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Part4\SliderBindingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Part4\SliderTransformsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Part3\StaticConstantsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Part2\XamlPlusCodePage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Part3\RelativeLayoutPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Part4\ListViewDemoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

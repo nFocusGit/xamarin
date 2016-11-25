@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace XamlSamples
+namespace XamlSamples.Part2
 {
-    public partial class SharedResourcesPage : ContentPage
+    public partial class GridDemoPage : ContentPage
     {
-        public SharedResourcesPage()
+        public GridDemoPage()
         {
             InitializeComponent();
         }

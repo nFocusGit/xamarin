@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 using Xamarin.Forms;
 
-namespace XamlSamples
+namespace XamlSamples.Part4
 {
-    public partial class HelloXamlPage : ContentPage
+    public partial class SliderTransformsPage : ContentPage
     {
-        public HelloXamlPage()
+        public SliderTransformsPage()
         {
             InitializeComponent();
         }
