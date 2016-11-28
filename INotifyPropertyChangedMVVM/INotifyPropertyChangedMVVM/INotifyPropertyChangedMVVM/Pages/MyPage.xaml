@@ -7,8 +7,6 @@
     <Entry x:Name="fornavnEntry" Placeholder="Indtast navn..." />
     <Button x:Name="okButton" Text="OK"/>
     <Label x:Name="statusLabel" Text="{Binding Status}" />
-    
-    
   </StackLayout>
   
   
