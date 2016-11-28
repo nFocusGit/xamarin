@@ -12,7 +12,7 @@ namespace MvvmOpgave2.ViewModels
     {
         private string versionsText = "v2.0";
         private string statusText = "Type your PIN...";
-        private string pinText = "1234";
+        private string pinText = "";
         private bool loginButton = false;
 
         public string VersionsText
@@ -38,29 +38,40 @@ namespace MvvmOpgave2.ViewModels
             {
                 int n;
                 var isNumeric = int.TryParse(value, out n);
-                
-                if (pinText != value)
+                if (value != null)
                 {
-                    pinText = value;
-                    OnPropertyChanged(); // implicit
-                                         // or OnPropertyChanged(); explicit:  The compiler sets thes string
-                    if (String.IsNullOrEmpty(PinText) || String.IsNullOrWhiteSpace(PinText))
+                    if (isNumeric)
                     {
-                        LoginButton = false;
-                        StatusText = "Type your PIN...";
-                    }
-                    else
-                    {
-                        if (pinText.Length == 8)
+                        if (pinText != value)
                         {
-                            LoginButton = true;
+                            pinText = value;
+                            OnPropertyChanged(); // implicit
+                                                 // or OnPropertyChanged(); explicit:  The compiler sets thes string
+                            if (String.IsNullOrEmpty(PinText) || String.IsNullOrWhiteSpace(PinText))
+                            {
+                                LoginButton = false;
+                                StatusText = "Type your PIN...";
+                            }
+                            else
+                            {
+                                if (pinText.Length == 8)
+                                {
+                                    LoginButton = true;
+                                }
+                                else
+                                {
+                                    LoginButton = false;
+                                }
+                                StatusText = "PIN: " + PinText;
+                            }
                         }
-                        else
-                        {
-                            LoginButton = false;
-                        }
-                        StatusText = "PIN: " + PinText;
                     }
+                    //else
+                    //{
+                    //    string s = value;
+                    //    PinText = s.Remove(s.Length - 1);
+                    //    OnPropertyChanged();
+                    //}
                 }
             }
         }
