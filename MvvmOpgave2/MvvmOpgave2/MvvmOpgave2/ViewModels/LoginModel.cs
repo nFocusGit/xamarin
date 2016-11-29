@@ -10,30 +10,30 @@ namespace MvvmOpgave2.ViewModels
 {
     public class LoginModel : INotifyPropertyChanged
     {
-        private string versionsText = "v2.0";
-        private string statusText = "Type your PIN...";
-        private string pinText = "";
-        private bool loginButton = false;
+        private string version = "v2.0";
+        private string status = "Type your PIN...";
+        private string pin = "";
+        private bool loginButtonEnabled = false;
 
         public string VersionsText
         {
-            get { return versionsText; }
+            get { return version; }
         }
         public string StatusText
         {
-            get { return statusText; }
+            get { return status; }
             set
             {
-                if (statusText != value)
+                if (status != value)
                 {
-                    statusText = value;
+                    status = value;
                     OnPropertyChanged();
                 }
             }
         }
         public string PinText
         {
-            get { return pinText; }
+            get { return pin; }
             set
             {
                 int n;
@@ -42,9 +42,9 @@ namespace MvvmOpgave2.ViewModels
                 {
                     if (isNumeric)
                     {
-                        if (pinText != value)
+                        if (pin != value)
                         {
-                            pinText = value;
+                            pin = value;
                             OnPropertyChanged(); // implicit
                                                  // or OnPropertyChanged(); explicit:  The compiler sets thes string
                             if (String.IsNullOrEmpty(PinText) || String.IsNullOrWhiteSpace(PinText))
@@ -54,7 +54,7 @@ namespace MvvmOpgave2.ViewModels
                             }
                             else
                             {
-                                if (pinText.Length == 8)
+                                if (pin.Length == 8)
                                 {
                                     LoginButton = true;
                                 }
@@ -77,12 +77,12 @@ namespace MvvmOpgave2.ViewModels
         }
         public bool LoginButton
         {
-            get { return loginButton; }
+            get { return loginButtonEnabled; }
             set
             {
-                if (loginButton != value)
+                if (loginButtonEnabled != value)
                 {
-                    loginButton = value;
+                    loginButtonEnabled = value;
                     OnPropertyChanged();
                 }
             }
