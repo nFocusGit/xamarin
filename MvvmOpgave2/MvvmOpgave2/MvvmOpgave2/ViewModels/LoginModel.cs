@@ -27,8 +27,7 @@ namespace MvvmOpgave2.ViewModels
                 if (status != value)
                 {
                     status = value;
-                    OnPropertyChanged();
-                    OnPropertyChanged("Pin");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -46,7 +45,7 @@ namespace MvvmOpgave2.ViewModels
                         if (pin != value)
                         {
                             pin = value;
-                            OnPropertyChanged(); // implicit
+                            NotifyPropertyChanged(); // implicit
                                                  // or OnPropertyChanged(); explicit:  The compiler sets thes string
                             if (String.IsNullOrEmpty(Pin) || String.IsNullOrWhiteSpace(Pin))
                             {
@@ -84,8 +83,7 @@ namespace MvvmOpgave2.ViewModels
                 if (loginButtonEnabled != value)
                 {
                     loginButtonEnabled = value;
-                    OnPropertyChanged();
-                    OnPropertyChanged("Pin");
+                    NotifyPropertyChanged();
                 }
             }
         }
@@ -93,7 +91,9 @@ namespace MvvmOpgave2.ViewModels
 
         public event PropertyChangedEventHandler PropertyChanged;
         // CallerMemberName is used to set propertyName if none...
-        public virtual void OnPropertyChanged([CallerMemberName] string propertyName = "")
+
+        //private void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
+        public virtual void NotifyPropertyChanged([CallerMemberName] string propertyName = "")
         {
             var myEvent = PropertyChanged;
             if (myEvent != null)

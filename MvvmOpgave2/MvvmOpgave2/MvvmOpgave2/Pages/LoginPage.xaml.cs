@@ -13,20 +13,16 @@ namespace MvvmOpgave2.Pages
     {
         private LoginModel loginModel;
 
-        public LoginPage()
-        {
-            InitializeComponent();
-        }
-
         public LoginPage(LoginModel loginModel)
         {
+            InitializeComponent();
+
             this.loginModel = loginModel;
             BindingContext = this.loginModel;
-            InitializeComponent();
 
             okButton.SetBinding(Button.IsEnabledProperty, "LoginButtonEnabled", BindingMode.OneWay);
             //// type safe
-            loginEntry.SetBinding<LoginModel>(Entry.TextProperty, vm => vm.Pin, BindingMode.OneWayToSource);
+            //loginEntry.SetBinding<LoginModel>(Entry.TextProperty, vm => vm.Pin, BindingMode.OneWayToSource);
         }
 
     }
