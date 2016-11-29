@@ -24,9 +24,9 @@ namespace MvvmOpgave2.Pages
             BindingContext = this.loginModel;
             InitializeComponent();
 
-            okButton.SetBinding(Button.IsEnabledProperty, "LoginButton", BindingMode.OneWay);
+            okButton.SetBinding(Button.IsEnabledProperty, "LoginButtonEnabled", BindingMode.OneWay);
             //// type safe
-            loginEntry.SetBinding<LoginModel>(Entry.TextProperty, vm => vm.PinText, BindingMode.OneWayToSource);
+            loginEntry.SetBinding<LoginModel>(Entry.TextProperty, vm => vm.Pin, BindingMode.OneWayToSource);
         }
 
     }

@@ -15,11 +15,11 @@ namespace MvvmOpgave2.ViewModels
         private string pin = "";
         private bool loginButtonEnabled = false;
 
-        public string VersionsText
+        public string Version
         {
             get { return version; }
         }
-        public string StatusText
+        public string Status
         {
             get { return status; }
             set
@@ -28,10 +28,11 @@ namespace MvvmOpgave2.ViewModels
                 {
                     status = value;
                     OnPropertyChanged();
+                    OnPropertyChanged("Pin");
                 }
             }
         }
-        public string PinText
+        public string Pin
         {
             get { return pin; }
             set
@@ -47,22 +48,22 @@ namespace MvvmOpgave2.ViewModels
                             pin = value;
                             OnPropertyChanged(); // implicit
                                                  // or OnPropertyChanged(); explicit:  The compiler sets thes string
-                            if (String.IsNullOrEmpty(PinText) || String.IsNullOrWhiteSpace(PinText))
+                            if (String.IsNullOrEmpty(Pin) || String.IsNullOrWhiteSpace(Pin))
                             {
-                                LoginButton = false;
-                                StatusText = "Type your PIN...";
+                                LoginButtonEnabled = false;
+                                Status = "Type your PIN...";
                             }
                             else
                             {
                                 if (pin.Length == 8)
                                 {
-                                    LoginButton = true;
+                                    LoginButtonEnabled = true;
                                 }
                                 else
                                 {
-                                    LoginButton = false;
+                                    LoginButtonEnabled = false;
                                 }
-                                StatusText = "PIN: " + PinText;
+                                Status = "PIN: " + Pin;
                             }
                         }
                     }
@@ -75,7 +76,7 @@ namespace MvvmOpgave2.ViewModels
                 }
             }
         }
-        public bool LoginButton
+        public bool LoginButtonEnabled
         {
             get { return loginButtonEnabled; }
             set
@@ -84,6 +85,7 @@ namespace MvvmOpgave2.ViewModels
                 {
                     loginButtonEnabled = value;
                     OnPropertyChanged();
+                    OnPropertyChanged("Pin");
                 }
             }
         }

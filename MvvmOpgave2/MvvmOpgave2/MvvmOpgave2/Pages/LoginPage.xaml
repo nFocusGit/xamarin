@@ -4,8 +4,8 @@
              x:Class="MvvmOpgave2.Pages.LoginPage">
 
   <StackLayout >
-    <Label x:Name="versionsLabel" Text="{Binding VersionsText}" HorizontalOptions="Center" />
-    <Label x:Name="statusLabel" Text="{Binding StatusText}" HorizontalOptions="Center" />
+    <Label x:Name="versionsLabel" Text="{Binding Version}" HorizontalOptions="Center" />
+    <Label x:Name="statusLabel" Text="{Binding Status}" HorizontalOptions="Center" />
     <Entry x:Name="loginEntry" Placeholder="PIN..." Keyboard="Numeric" />
     <Button x:Name="okButton" Text="OK"/>
   </StackLayout>  

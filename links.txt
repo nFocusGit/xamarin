@@ -1,0 +1,2 @@
+https://blog.xamarin.com/introduction-to-data-binding/
+https://github.com/davidbritch/xamarin-forms
