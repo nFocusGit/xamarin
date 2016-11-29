@@ -10,6 +10,8 @@
     <Entry x:Name="loginEntry" Text="{Binding Pin, Mode=OneWayToSource}" Placeholder="PIN..." Keyboard="Numeric" />
     <Button x:Name="okButton" Text="OK" />
     <!--<Button x:Name="okButton" Text="OK" IsEnabled="{Binding, LoginButtonEnabled}"/>-->
+    <!--<Image Source="waterfall"/>
+    <Image x:Name="waterfall"/>-->
   </StackLayout>  
   
 </ContentPage>

@@ -16,7 +16,7 @@ namespace MvvmOpgave2.Pages
         public LoginPage(LoginModel loginModel)
         {
             InitializeComponent();
-
+            //waterfall.Source = new ImageSource("waterfall");
             this.loginModel = loginModel;
             BindingContext = this.loginModel;
 
