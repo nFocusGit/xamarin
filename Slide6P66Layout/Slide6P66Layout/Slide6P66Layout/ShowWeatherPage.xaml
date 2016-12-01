@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Slide6P66Layout.ShowWeatherPage"
+             BackgroundImage="sky2.png">
+  
+  <StackLayout>
+
+    <StackLayout x:Name="row1" BackgroundColor="Red" HeightRequest="100" Orientation="Horizontal" VerticalOptions="Start" Opacity="0.8">
+    <!--<StackLayout x:Name="row1" >-->
+      <Label Text="Line 1" VerticalOptions="Center" HorizontalOptions="Center" />
+      <Label Text="Line 2" VerticalOptions="Center" HorizontalOptions="Center" />
+      <Label Text="Line 3" VerticalOptions="Center" HorizontalOptions="Center" />
+    </StackLayout>
+    
+    <StackLayout x:Name="row2"  VerticalOptions="EndAndExpand" Opacity="0.5" >
+      <Label Text="Layout 2" VerticalOptions="Center" HorizontalOptions="Center" />
+    </StackLayout>
+
+    <StackLayout x:Name="row3" BackgroundColor="Red" HeightRequest="100" Orientation="Horizontal" VerticalOptions="End" Opacity="0.5">
+    <!--<StackLayout x:Name="row3" >-->
+      <Label Text="Layout 3" VerticalOptions="Center" HorizontalOptions="Center" />
+    </StackLayout>
+    
+  </StackLayout>
+</ContentPage>
