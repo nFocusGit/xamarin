@@ -15,5 +15,10 @@ namespace NavigationBasic
             InitializeComponent();
             Title = "PageTabbed B";
         }
+
+        private async void PushToRoot(object sender, EventArgs e)
+        {
+            await Navigation.PopToRootAsync();
+        }
     }
 }

@@ -14,6 +14,14 @@ namespace NavigationBasic
         {
             InitializeComponent();
             Title = "PageTabbed A";
-                    }
+        }
+
+        private async void PushPageB(object sender, EventArgs e)
+        {
+            Page pageTabbedB = new PageTabbedB();
+            await Navigation.PushAsync(pageTabbedB);
+            //we could as well write like this
+            //await Navigation.PushAsync(new Page2());
+        }
     }
 }

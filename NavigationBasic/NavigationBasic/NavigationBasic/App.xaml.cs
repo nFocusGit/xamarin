@@ -12,20 +12,15 @@ namespace NavigationBasic
         private TabbedPage tabbedPage = new TabbedPage();
         //Page pageTabbedA = new PageTabbedA();
         //Page pageTabbed1 = new PageTabbed1();
-
         private NavigationPage navigationPageLetters = new NavigationPage();
         private NavigationPage navigationPageNumbers = new NavigationPage();
-
-
-
+        
         public App()
         {
             InitializeComponent();
-
             MainPage = tabbedPage;
             //tabbedPage.Children.Add(pageTabbedA);
             //tabbedPage.Children.Add(pageTabbed1);
-
             //tabbedPage.Children.Add(navigationPageLetters);
             //tabbedPage.Children.Add(navigationPageNumbers);
         }
@@ -40,7 +35,6 @@ namespace NavigationBasic
 
             await navigationPageLetters.PushAsync(pageTabbedA);
             await navigationPageNumbers.PushAsync(pageTabbed1);
-
             
             tabbedPage.Children.Add(navigationPageLetters);
             tabbedPage.Children.Add(navigationPageNumbers);

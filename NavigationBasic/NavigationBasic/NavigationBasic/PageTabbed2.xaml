@@ -10,5 +10,7 @@
            VerticalOptions="Center"
            HorizontalOptions="Center" />
 
+    <Button x:Name="buttonGoto" Text="Back..." Clicked="PushToRoot" />
+
   </StackLayout>
 </ContentPage>

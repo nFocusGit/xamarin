@@ -10,5 +10,7 @@
            VerticalOptions="Center"
            HorizontalOptions="Center" />
 
+    <Button x:Name="buttonGoto" Text="Show Page 2" Clicked="PushPage2" />
+
   </StackLayout>
 </ContentPage>

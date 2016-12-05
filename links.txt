@@ -2,3 +2,6 @@ https://blog.xamarin.com/introduction-to-data-binding/
 https://github.com/davidbritch/xamarin-forms
 
 https://developer.xamarin.com/guides/xamarin-forms/custom-renderer/entry/
+
+Xamarin Forms with Visual Studio Part 6 [TabbedPage] 
+https://www.youtube.com/watch?v=bT1JeVLsVig
