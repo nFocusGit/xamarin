@@ -14,15 +14,14 @@ namespace Backend.WebApi.Controllers
 
         public ProductsController()
         {
-            for (int i = 0; i < 3; i++)
+            for (int i = 2; i < 10; i++)
             {
                 Product p = new Product();
                 p.Id = i;
                 p.Name = "New Name: " + i;
-                Char c = Convert.ToChar(i);
                 p.Category = "Category: " + i;
                 decimal d = (decimal)i * 2;
-                p.Price = 10;
+                p.Price = d;
                 products.Add(p);
             }
 
