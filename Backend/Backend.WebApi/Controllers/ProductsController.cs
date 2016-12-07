@@ -6,6 +6,9 @@ using System.Net;
 using System.Net.Http;
 using System.Web.Http;
 using System.Web.Http.ExceptionHandling;
+using System.Threading;
+using System.Threading.Tasks;
+using System.Web.Http.Results;
 
 // https://docs.google.com/presentation/d/1BMGkgXv1V8cbS0AD-jQAxdZNSXsexsptbX3_QWi8jo8/present#slide=id.g170d4c8953_3_18
 
@@ -71,8 +74,7 @@ namespace Backend.WebApi.Controllers
             }
             else
             {
-                //MyExceptionHandler
-                return null;
+                throw new NotFoundException();
             }
         }
 
@@ -86,12 +88,20 @@ namespace Backend.WebApi.Controllers
         }
 
         // http://stackoverflow.com/questions/21901808/need-a-complete-sample-to-handle-unhandled-exceptions-using-exceptionhandler-i
-        public class MyExceptionHandler : ExceptionHandler
+        public class NotFoundException : Exception
         {
-            public override void Handle(ExceptionHandlerContext context)
+
+        }
+
+        public class NotFoundExceptionHandler : IExceptionHandler
+        {
+            public Task HandleAsync(ExceptionHandlerContext context, CancellationToken cancellationToken)
             {
-                //TODO: Do what you need to do
-                base.Handle(context);
+                if (context.Exception is NotFoundException)
+                {
+                    context.Result = new StatusCodeResult(System.Net.HttpStatusCode.NotFound, context.Request);
+                }
+                return Task.FromResult(1);
             }
         }
     }

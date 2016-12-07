@@ -17,7 +17,7 @@ namespace Backend.WebApi
             
             config.MapHttpAttributeRoutes();
 
-            config.Services.Replace(typeof(IExceptionHandler), new MyExceptionHandler());
+            config.Services.Replace(typeof(IExceptionHandler), new NotFoundExceptionHandler());
 
             //config.Routes.MapHttpRoute(
             //    name: "DefaultApi",
