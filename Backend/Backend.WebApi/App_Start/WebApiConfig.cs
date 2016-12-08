@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Backend.WebApi.ActionFilters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Http;
@@ -11,13 +12,23 @@ namespace Backend.WebApi
     {
         public static void Register(HttpConfiguration config)
         {
-            // Web API configuration and services
+            // Register the global exception handler
+            config.Services.Replace(typeof(IExceptionHandler),
+                new NotFoundExceptionHandler());
+
+            // Register delegating handlers
+            //config.MessageHandlers.Add(new FirstDelegatingHandler());
+            //config.MessageHandlers.Add(new SecondDelegatingHandler());
+
+            //// ActionFilter
+            //// http://www.tutorialsteacher.com/webapi/web-api-filters
+            // Register action filters
+            //config.Filters.Add(new FirstActionFilter());
+            //config.Filters.Add(new SecondActionFilter());
+            config.Filters.Add(new VersionCheckFilter());
 
             // Web API routes
-            
             config.MapHttpAttributeRoutes();
-
-            config.Services.Replace(typeof(IExceptionHandler), new NotFoundExceptionHandler());
 
             //config.Routes.MapHttpRoute(
             //    name: "DefaultApi",

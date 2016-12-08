@@ -17,33 +17,10 @@ using System.Web.Http.Controllers;
 namespace Backend.WebApi.Controllers
 {
     [RoutePrefix("products")]
-    public class ProductsController : ApiController, IActionFilter
+    public class ProductsController : ApiController
     {
         private List<Product> products = new List<Product>();
         private List<Review> reviews = new List<Review>();
-
-        //// ActionFilter
-        //// http://www.tutorialsteacher.com/webapi/web-api-filters
-        //public bool AllowMultiple
-        //{
-        //    get { return true; }
-        //}
-
-        //public Task<HttpResponseMessage> ExecuteActionFilterAsync(HttpActionContext actionContext, CancellationToken cancellationToken, Func<Task<HttpResponseMessage>> continuation)
-        //{
-        //    Trace.WriteLine(string.Format("Action Method {0} executing at {1}", actionContext.ActionDescriptor.ActionName, DateTime.Now.ToShortDateString()), "Web API Logs");
-
-        //    var result = continuation();
-
-        //    result.Wait();
-
-        //    Trace.WriteLine(string.Format("Action Method {0} executed at {1}", actionContext.ActionDescriptor.ActionName, DateTime.Now.ToShortDateString()), "Web API Logs");
-
-        //    return result;
-        //}
-        //// ActionFilter
-
-
 
         public ProductsController()
         {
