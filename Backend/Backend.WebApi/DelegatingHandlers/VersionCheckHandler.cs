@@ -15,14 +15,13 @@ namespace Backend.WebApi.DelegatingHandlers
     {
         protected override async Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
         {
-            HttpResponseMessage response = null;
             // 1. Stuff you do here happens before request reaches controller - and filters
+            HttpResponseMessage response = null;
             Debug.WriteLine("First delegating handler - before filters and controller");
-
             var keyVersion = request.Headers.FirstOrDefault(v => v.Key == "x-version");
             if (keyVersion.Key != null)
             {
-                var s = keyVersion.Value.First();
+                var s = keyVersion.Value.FirstOrDefault();
                 if (s.Equals("42"))
                 {
                     // 2. Call the next link in the chain
@@ -34,13 +33,10 @@ namespace Backend.WebApi.DelegatingHandlers
                 var result = new StatusCodeResult((HttpStatusCode)418, request);
                 response = await result.ExecuteAsync(cancellationToken);
             }
-
             // 3. Stuff you do here happens after request reaches controller - and filters
             Debug.WriteLine("First delegating handler - after filters and controller");
-
             // 4. Return a response to client
             return response;
-
         }
     }
 }

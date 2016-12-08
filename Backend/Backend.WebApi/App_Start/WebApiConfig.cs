@@ -17,6 +17,7 @@ namespace Backend.WebApi
             config.Services.Replace(typeof(IExceptionHandler),
                 new NotFoundExceptionHandler());
 
+            // Used to do jobs before "AUTH"
             // Register delegating handlers
             //config.MessageHandlers.Add(new FirstDelegatingHandler());
             //config.MessageHandlers.Add(new SecondDelegatingHandler());

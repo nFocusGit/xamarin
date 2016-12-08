@@ -25,15 +25,13 @@ namespace Backend.WebApi.ActionFilters
 
         public async Task<HttpResponseMessage> ExecuteActionFilterAsync(HttpActionContext actionContext, CancellationToken cancellationToken, Func<Task<HttpResponseMessage>> continuation)
         {
-            HttpResponseMessage response = null;
-
             // 1. Stuff you do here will happen before the controller action method
+            HttpResponseMessage response = null;
             Debug.WriteLine("VersionCheckFilter: Before controller method");
-
             var keyVersion = actionContext.Request.Headers.FirstOrDefault(v => v.Key == "x-version");
             if (keyVersion.Key != null)
             {
-                var s = keyVersion.Value.First();
+                var s = keyVersion.Value.FirstOrDefault();
                 if (s.Equals("42"))
                 {
                     // 2. Now we send the request to the next link in the chain of filters
