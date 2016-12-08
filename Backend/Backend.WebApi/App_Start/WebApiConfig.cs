@@ -1,4 +1,5 @@
 ﻿using Backend.WebApi.ActionFilters;
+using Backend.WebApi.DelegatingHandlers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,13 +20,14 @@ namespace Backend.WebApi
             // Register delegating handlers
             //config.MessageHandlers.Add(new FirstDelegatingHandler());
             //config.MessageHandlers.Add(new SecondDelegatingHandler());
+            config.MessageHandlers.Add(new VersionCheckHandler());
 
             //// ActionFilter
             //// http://www.tutorialsteacher.com/webapi/web-api-filters
             // Register action filters
             //config.Filters.Add(new FirstActionFilter());
             //config.Filters.Add(new SecondActionFilter());
-            config.Filters.Add(new VersionCheckFilter());
+            //config.Filters.Add(new VersionCheckFilter());
 
             // Web API routes
             config.MapHttpAttributeRoutes();
