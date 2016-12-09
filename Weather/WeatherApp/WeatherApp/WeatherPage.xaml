@@ -33,7 +33,7 @@
             <Entry x:Name="zipCodeEntry" />
           </StackLayout>
           <StackLayout Padding="0,0,0,10" VerticalOptions="End">
-            <Button x:Name="getWeatherBtn" Text="Get Weather" WidthRequest="185" BorderWidth="1" >
+            <Button x:Name="getWeatherByZipCodeBtn" Text="Get Weather" WidthRequest="185" BorderWidth="1" >
               <!-- Set iOS colors; use defaults on other platforms -->
               <Button.TextColor>
                 <OnPlatform x:TypeArguments="Color" iOS="White"/>
@@ -44,6 +44,28 @@
             </Button>
           </StackLayout>
         </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand"
+              BackgroundColor="#545454">                     
+          <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
+            <Label Text="Search by City" TextColor="White" FontAttributes="Bold"
+                FontSize="Medium" />
+            <Label x:Name="cityLabel" Text="City" Style="{StaticResource labelStyle}" />
+            <Entry x:Name="cityEntry" />
+          </StackLayout>
+          <StackLayout Padding="0,0,0,10" VerticalOptions="End">
+            <Button x:Name="getWeatherByCityBtn" Text="Get Weather" WidthRequest="185" BorderWidth="1" >
+               Set iOS colors; use defaults on other platforms 
+              <Button.TextColor>
+                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+              </Button.TextColor>
+              <Button.BorderColor>
+                <OnPlatform x:TypeArguments="Color" iOS="White"/>
+              </Button.BorderColor>
+            </Button>
+          </StackLayout>
+        </StackLayout>
+          
         <StackLayout Padding="10,10,10,10" HorizontalOptions="Start">
           <Label Text="Location" Style="{StaticResource labelStyle}" />
           <ContentView Style="{StaticResource fieldView}">
