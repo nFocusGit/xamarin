@@ -5,13 +5,19 @@ namespace WeatherApp
 {
     public class Core
     {
+//        http://api.openweathermap.org/data/2.5/weather?lat=55.676098&lon=12.5683&appid=e7de5f21f7e48a34cabd482680b17a73
+//http://api.openweathermap.org/data/2.5/weather?q=oslo&appid=e7de5f21f7e48a34cabd482680b17a73
+//http://api.openweathermap.org/data/2.5/weather?zip=90210,us&appid=e7de5f21f7e48a34cabd482680b17a73
+
         public static async Task<Weather> GetWeather(string zipCode)
         {
             //Sign up for a free API key at http://openweathermap.org/appid
             string key = "e7de5f21f7e48a34cabd482680b17a73";
-            string queryStringByZipCode = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "&appid=" + key;
+            
+            string queryString = "http://api.openweathermap.org/data/2.5/weather?zip="
+                + zipCode + "&appid=" + key;
 
-            var results = await DataService.getDataFromService(queryStringByZipCode).ConfigureAwait(false);
+            var results = await DataService.getDataFromService(queryString).ConfigureAwait(false);
 
             if (results["weather"] != null)
             {
