@@ -1,0 +1,5 @@
+inheritance polymorphism encapsulation c#
+
+http://www.c-sharpcorner.com/UploadFile/mkagrahari/introduction-to-object-oriented-programming-concepts-in-C-Sharp/
+
+Class vs Object

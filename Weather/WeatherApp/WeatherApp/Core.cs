@@ -9,12 +9,7 @@ namespace WeatherApp
         {
             //Sign up for a free API key at http://openweathermap.org/appid
             string key = "e7de5f21f7e48a34cabd482680b17a73";
-            string queryStringByZipCode = "http://api.openweathermap.org/data/2.5/weather?zip="
-                + zipCode + "&appid=" + key;
-
-            string city = "London";
-            string queryStringByCity = "http://api.openweathermap.org/data/2.5/weather?q="
-    + city + "&appid=" + key;
+            string queryStringByZipCode = "http://api.openweathermap.org/data/2.5/weather?zip=" + zipCode + "&appid=" + key;
 
             var results = await DataService.getDataFromService(queryStringByZipCode).ConfigureAwait(false);
 
@@ -22,7 +17,11 @@ namespace WeatherApp
             {
                 Weather weather = new Weather();
                 weather.Title = (string)results["name"];
+
+                //string s = (string)results["main"]["temp"];
+                //weather.Temperature = ConvertFahrenheitToCelsius(Convert.ToDouble(s)).ToString() + " C";
                 weather.Temperature = (string)results["main"]["temp"] + " F";
+                
                 weather.Wind = (string)results["wind"]["speed"] + " mph";
                 weather.Humidity = (string)results["main"]["humidity"] + " %";
                 weather.Visibility = (string)results["weather"][0]["main"];
@@ -44,9 +43,7 @@ namespace WeatherApp
         {
             //Sign up for a free API key at http://openweathermap.org/appid
             string key = "e7de5f21f7e48a34cabd482680b17a73";
-
-            string queryStringByCity = "http://api.openweathermap.org/data/2.5/weather?q="
-    + city + "&appid=" + key;
+            string queryStringByCity = "http://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=" + key;
 
             var results = await DataService.getDataFromService(queryStringByCity).ConfigureAwait(false);
 
@@ -54,7 +51,11 @@ namespace WeatherApp
             {
                 Weather weather = new Weather();
                 weather.Title = (string)results["name"];
+
+                //string s = (string)results["main"]["temp"];
+                //weather.Temperature = ConvertFahrenheitToCelsius(Convert.ToDouble(s)).ToString() + " C";
                 weather.Temperature = (string)results["main"]["temp"] + " F";
+                
                 weather.Wind = (string)results["wind"]["speed"] + " mph";
                 weather.Humidity = (string)results["main"]["humidity"] + " %";
                 weather.Visibility = (string)results["weather"][0]["main"];
@@ -70,6 +71,11 @@ namespace WeatherApp
             {
                 return null;
             }
+        }
+
+        private static double ConvertFahrenheitToCelsius(double f)
+        {
+            return (5.0 / 9.0) * (f - 32);
         }
     }
 }
