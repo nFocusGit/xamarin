@@ -1,5 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
-	<uses-sdk android:minSdkVersion="15" />
-	<application android:label="$safeprojectname$"></application>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" android:installLocation="preferExternal" package="dk.eu.globe" android:versionCode="1" android:versionName="1">
+	<uses-sdk android:minSdkVersion="15" android:targetSdkVersion="22" />
+	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+	<uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+	<application android:label="$safeprojectname$" android:icon="@drawable/icon"></application>
 </manifest>
